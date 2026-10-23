@@ -1,0 +1,14 @@
+🚀 Codomax Module 4 — RAG, Embeddings & Vector Databases
+
+I built a “Chat With Your Documents” RAG prototype with Python, Streamlit and Gemini! 📚
+
+The app extracts text from PDFs/TXT files, splits it into chunks, retrieves relevant passages using TF-IDF vectors and cosine similarity, and asks Gemini to answer with document references.
+
+What I learned: LLM hallucinations, retrieval-augmented generation, document processing, chunking, similarity search, API integration and error handling.
+
+This prototype uses TF-IDF retrieval rather than neural embeddings or a persistent vector database; integrating those is my next improvement.
+
+GitHub: [PASTE YOUR MODULE 4 REPOSITORY LINK]
+Live demo: [PASTE YOUR MODULE 4 STREAMLIT LINK]
+
+#Codomax #RAG #Python #Streamlit #GeminiAPI #GenerativeAI
