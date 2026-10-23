@@ -60,22 +60,21 @@ def chunk_text(text, chunk_size=1000, overlap=200):
 
     return chunks
 
+
 def create_vector_database(chunks, document_id):
     model = load_embedding_model()
     client = load_database()
 
     collection_name = "doc_" + document_id[:20]
 
-    
-collection = client.get_or_create_collection(
-    name=collection_name
-)
+    collection = client.get_or_create_collection(
+        name=collection_name
+    )
 
-# Clear existing chunks before inserting new ones
-existing = collection.get()
+    existing = collection.get()
 
-if existing["ids"]:
-    collection.delete(ids=existing["ids"])
+    if existing["ids"]:
+        collection.delete(ids=existing["ids"])
 
     embeddings = model.encode(
         chunks,
